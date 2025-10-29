@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio – Ameixa Mathias</title>
+<style>
+:root {
+    --primary: #1e90ff;
+    --bg: #f9f9f9;
+    --text: #222;
+    --card-bg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --text: #eee;
+        --card-bg: #1f1f1f;
+    }
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 60px 10%;
+    border-bottom: 1px solid #ddd;
+}
+
+h1,h2,h3 {
+    color: var(--primary);
+}
+
+.projects, .parcours, .veille, .entreprise, .competences {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card, .parcours-card, .veille-card, .entreprise-card, .competence-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover, .parcours-card:hover, .veille-card:hover, .entreprise-card:hover, .competence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+a {
+    color: var(--primary);
+}
+
+@media(max-width:600px){
+    nav a {
+        display:block;
+        margin:10px 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<a href="#presentation">Présentation</a>
+<a href="#bts">BTS SIO</a>
+<a href="#entreprise">Entreprise</a>
+<a href="#projects">Projets</a>
+<a href="#competences">Compétences</a>
+<a href="#synthese">Synthèse</a>
+<a href="#veille">Veille</a>
+<a href="#parcours">Parcours</a>
+</nav>
+</header>
+
+<section id="presentation">
+<h1>Bonjour, je suis Ameixa Mathias</h1>
+<p>Étudiant en <strong>BTS SIO option SISR</strong> au lycée Robert Schuman. Contact : <strong>mathiasameixa@gmail.com</strong> | <strong>07 66 30 97 01</strong></p>
+<p>📄 <a href="https://www.canva.com/design/DAGbWmxZRA8/1ydGlpiXMk-u2I258ZEBbw/edit" target="_blank">Voir mon CV</a></p>
+<p>Après un échec en lycée général, j’ai choisi une voie plus concrète avec la filière professionnelle SN, puis le BTS SIO option SISR. Ce parcours m’a permis de développer mes compétences techniques, de mieux comprendre les réseaux et de renforcer ma motivation à travailler dans l’administration système et réseau.</p>
+</section>
+
+<section id="bts">
+<h2>Présentation du BTS SIO</h2>
+<p>Le <strong>BTS Services Informatiques aux Organisations</strong> forme des techniciens capables d’installer, configurer, sécuriser et administrer des infrastructures informatiques.</p>
+<p>L’option <strong>SISR</strong> se concentre sur :</p>
+<ul>
+<li>L’administration des serveurs et réseaux</li>
+<li>Le déploiement et la supervision des services</li>
+<li>La sécurité des systèmes informatiques</li>
+<li>Le support technique aux utilisateurs</li>
+</ul>
+</section>
+
+<section id="entreprise">
+<h2>Présentation de l’entreprise – Alternance</h2>
+<div class="entreprise">
+<div class="entreprise-card">
+<h3>🏢 La Préfecture de la Seine-Saint-Denis</h3>
+<p>Située à Bobigny, elle représente l’État et gère la sécurité, la citoyenneté et l’administration territoriale. Environ 1500 à 2000 employés.</p>
+</div>
+<div class="entreprise-card">
+<h3>💼 Missions en alternance</h3>
+<ul>
+<li>Participation à la mastérisation des postes de travail</li>
+<li>Configuration réseau et maintenance du parc informatique</li>
+<li>Assistance technique et résolution d’incidents utilisateurs</li>
+<li>Contribution à la sécurisation des accès et données</li>
+</ul>
+</div>
+<div class="entreprise-card">
+<h3>🧩 Outils utilisés</h3>
+<ul>
+<li>Windows 10 / 11, Debian</li>
+<li>Active Directory</li>
+<li>GLPI, WDS, MDT</li>
+<li>Outils de diagnostic réseau</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Mes Projets</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Projet scolaire – CTX fonctionnel</h3>
+<ul>
+<li>Configuration de switchs et routeurs</li>
+<li>Installation d’un serveur Active Directory</li>
+<li>Déploiement d’un serveur Exchange</li>
+<li>Documentation technique et schéma réseau</li>
+</ul>
+</div>
+<div class="project-card">
+<h3>Projet en entreprise – Mastérisation</h3>
+<ul>
+<li>Création et déploiement d’images systèmes</li>
+<li>Support technique utilisateur</li>
+<li>Maintenance du parc informatique</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="competences">
+<h2>Compétences techniques</h2>
+<div class="competences">
+<div class="competence-card">
+<h3>🌐 Réseaux</h3>
+<ul>
+<li>DHCP, DNS, VLAN, routage</li>
+<li>Configuration de switchs et routeurs</li>
+<li>Wireshark, Packet Tracer</li>
+</ul>
+</div>
+<div class="competence-card">
+<h3>🖥️ Systèmes</h3>
+<ul>
+<li>Windows Server, Debian</li>
+<li>Active Directory, GPO</li>
+<li>VirtualBox, Hyper-V</li>
+</ul>
+</div>
+<div class="competence-card">
+<h3>🔒 Sécurité</h3>
+<ul>
+<li>Gestion des droits utilisateurs</li>
+<li>Politiques de mot de passe et sauvegardes</li>
+<li>Notions de pare-feu et supervision</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="synthese">
+<h2>Tableau de Synthèse des Réalisations</h2>
+<table>
+<thead>
+<tr>
+<th>Réalisation</th>
+<th>Période</th>
+<th>Compétences mobilisées</th>
+<th>Documents associés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTX fonctionnel à l'école</td>
+<td>2024-2025</td>
+<td>Gestion du patrimoine, incidents, services, mode projet</td>
+<td>Documentation AD, schéma réseau</td>
+</tr>
+<tr>
+<td>Mastérisation en entreprise</td>
+<td>2025</td>
+<td>Support, déploiement, maintenance, sécurité</td>
+<td>Rapport de stage, fiches support</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="veille">
+<h2>Veille Technologique – L’IA dans les voitures</h2>
+<div class="veille">
+<div class="veille-card">
+<h3>Intelligence Artificielle dans les véhicules modernes</h3>
+<p>L’IA transforme le secteur automobile, avec des constructeurs comme Tesla, BMW et Mercedes. Elle améliore la sécurité, le confort et l’efficacité énergétique.</p>
+<ul>
+<li>Analyse de l’environnement via capteurs</li>
+<li>Conduite semi-autonome</li>
+<li>Maintenance prédictive</li>
+<li>Assistants vocaux embarqués</li>
+</ul>
+<p>Ces innovations posent aussi des enjeux de cybersécurité pour les véhicules connectés.</p>
+</div>
+</div>
+</section>
+
+<section id="parcours">
+<h2>Mon Parcours et Projet Professionnel</h2>
+<div class="parcours">
+<div class="parcours-card">
+<h3>🎓 Formation</h3>
+<p><strong>BTS SIO – Option SISR</strong><br>Lycée Robert Schuman (2024–2026)</p>
+<p><strong>Bac Pro SN</strong><br>2021–2024</p>
+</div>
+<div class="parcours-card">
+<h3>💼 Expériences</h3>
+<ul>
+<li>Projet scolaire : CTX, AD, Exchange</li>
+<li>Alternance : Mastérisation, maintenance du parc à la Préfecture de la Seine-Saint-Denis</li>
+</ul>
+</div>
+<div class="parcours-card">
+<h3>🚀 Objectif professionnel</h3>
+<p>Je souhaite devenir <strong>administrateur réseau</strong> et approfondir mes compétences en cybersécurité et administration système.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Ameixa Mathias – Portfolio BTS SIO SISR</p>
+</footer>
+
+</body>
+</html>
